@@ -15,7 +15,6 @@ def encrypt(s):
 
 #decryption
 def decrypt(s):
-    def decrypt(s):
     string = ""
     for i in s:
         binaryValue = int(ascii(i)) - 1
