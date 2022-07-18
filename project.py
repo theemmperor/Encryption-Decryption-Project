@@ -1,7 +1,6 @@
 #encryption
 def encrypt(s):
     string = ""
-    binaryConv = []
     for c in s:
         asciiValue = int(ord(c)) + 1        #adding 1 to ascii value
         binaryValue = bin(asciiValue)
@@ -16,7 +15,14 @@ def encrypt(s):
 
 #decryption
 def decrypt(s):
-  
+    def decrypt(s):
+    string = ""
+    for i in s:
+        binaryValue = int(ascii(i)) - 1
+        asciiValue = chr(binaryValue)
+        ascii_shift = asciiValue[-1:] + asciiValue[0]
+        string += chr(int(ascii_shift,2))
+    print(string)
 
 print("ASCII Text: ")
 a=input()                                     #user enters input for encryption
